@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-seo": "^5.1.0",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.35.1",
-    "storeon": "^1.7.1",
-    "next-seo": "^5.1.0"
+    "storeon": "^3.1.5",
+    "tailwindcss": "^3.4.10"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

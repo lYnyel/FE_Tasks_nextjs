@@ -1,11 +1,11 @@
 // /utils/api.ts
 
-const API_BASE_URL = 'https://jsonplaceholder.typicode.com';
+const API_BASE_URL = 'http://localhost:3000';
 
 // Функция для получения всех постов с пагинацией
 export const fetchPosts = async (page: number = 1): Promise<any[]> => {
   try {
-    const response = await fetch(`/api/posts?page=${page}`);
+    const response = await fetch(`${API_BASE_URL}/api/posts?page=${page}`);
     if (!response.ok) {
       throw new Error('Failed to fetch posts');
     }
@@ -20,7 +20,7 @@ export const fetchPosts = async (page: number = 1): Promise<any[]> => {
 // Функция для получения одного поста и комментариев
 export const fetchPostAndComments = async (id: number): Promise<{ post: any; comments: any[] }> => {
   try {
-    const response = await fetch(`/api/posts/${id}`);
+    const response = await fetch(`${API_BASE_URL}/api/posts/${id}`);
     if (!response.ok) {
       throw new Error('Failed to fetch post and comments');
     }
