@@ -1,11 +1,10 @@
-// /utils/api.ts
-
 const API_BASE_URL = 'http://localhost:3000';
 
 // Функция для получения всех постов с пагинацией
-export const fetchPosts = async (page: number = 1): Promise<any[]> => {
+
+export const fetchPosts = async (pages: number = 1): Promise<any[]> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/posts?page=${page}`);
+    const response = await fetch(`${API_BASE_URL}/api/posts?page=${pages}`);
     if (!response.ok) {
       throw new Error('Failed to fetch posts');
     }
